@@ -1,0 +1,71 @@
+实现嵌套框
+
+基本标签  http://www.jeasyui.net/demo/557.html
+
+<！DOCTYPE html>
+<HTML>
+        <head>
+            <meta charset="UTF-8">
+            <title>基本对话框 - jQuery EasyUI Demo</title>
+			
+
+			"加载路径
+            <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.7.0/themes/default/easyui.css">
+            <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.7.0/themes/icon.css">
+            <link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.7.0/demo.css">
+            "调用路径方法
+			<script type="text/javascript" src="../../jquery-easyui-1.7.0/jquery.min.js"></script>
+            <script type="text/javascript" src="../../jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+
+        </head>
+        <body>
+            <h2>Basic Tabs</h2>
+            <p>Click tab strip to swap tab panel content.</p>
+
+            <div style="margin:20px 0 10px 0;">
+            </div>
+            <!-- 外框        名字           大小 -->
+            <div class="easyui-tabs" style="width:700px;height:250px">
+                <!-- 内框1    名字           大小 -->
+                <div title="最左" style="padding:10px">
+                    <p style="font-size:14px">jQuery EasyUI framework helps you build your web pages easily.</p>
+                    <ul>
+                        <li>easyui is a collection of user-interface plugin based on jQuery.</li>
+                        <li>easyui provides essential functionality for building modem, interactive, javascript applications.</li>
+                        <li>using easyui you don't need to write many javascript code, you usually defines user-interface by writing some HTML markup.</li>
+                        <li>complete framework for HTML5 web page.</li>
+                        <li>easyui save your time and scales while developing your products.</li>
+                        <li>easyui is very easy but powerful.</li>
+                    </ul>
+                </div>
+                <!-- 内框2        名字           大小 -->
+                <div title="中间框" style="padding:10px">
+                    <ul>
+                        <li>
+                            <ul>
+                                <li>男猪脚</li>
+                                <li>女猪脚</li>
+                                <li>跑龙套</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>武当</li>
+                                <li>华山</li>
+                                <li>黑木崖</li>
+                            </ul>
+                        </li>
+                        <li>倚天屠龙记</li>
+                        <li>笑傲江湖</li>
+                        <li>连城诀</li>
+                    </ui>
+                </div>
+
+                <div title="Help" data-options="iconCls:'icon-help',closable:true" style="padding:10px">
+                This is the help content.
+                </div>
+
+            </div>
+
+        </body>
+</html>
