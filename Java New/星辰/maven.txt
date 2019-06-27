@@ -1,0 +1,59 @@
+
+
+maven环境配置问题
+	https://blog.csdn.net/s735819795/article/details/80484491
+
+
+
+本地库配置  ../conf/settings.xml 下找 localRepository
+   
+	  <!--
+		配置本地厂库路径：   --  localRepository节点用于配置本地仓库，
+		
+		本地仓库其实起到了一个缓存的作用，
+		它的默认地址是 C:\Users\用户名.m2。
+	  
+	  <localRepository>D:\EChuing\maven-repository</localRepository>    
+	  -->
+
+
+镜像仓库 - 远端仓库
+	  <mirrors>
+		<!--
+		全球 - 中央仓库
+		    <mirror>
+		      <id>mirrorId</id>
+		      <mirrorOf>repositoryId</mirrorOf>
+		      <name>Human Readable Name for this Mirror.</name>
+		      <url>http://my.repository.com/repo/path</url>
+		    </mirror>
+		 -->
+		国内 - 阿里云仓库
+		<mirror>
+			<id>nexus-aliyun</id>
+			<mirrorOf>central</mirrorOf>
+			<name>Nexus aliyun</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+		</mirror>	
+	</mirrors>
+
+
+
+当我们从maven中获取jar包的时候，maven首先会在本地仓库中查找，
+如果本地仓库有则返回；如果没有则从远程仓库中获取包，
+并在本地库中保存。
+
+
+
+
+
+IDE 配置 maven 库
+
+	file - settings - Build, Execution,Deployment - Maven 
+	     
+		Maven home directory:		本地maven仓库的目录
+		User settings file		maven仓库的配置文件
+
+
+
+

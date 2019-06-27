@@ -1,0 +1,84 @@
+
+
+不行也得行！
+
+
+
+CSS样式
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+JS样式
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+	
+<div class="container-fluid">    
+						
+    <div class="row">									
+														
+        <div class="col-xs-2 col-md-8 col-lg-4 bg-warning">		
+            A														
+        </div>														A： col-xs-2	
+        <div class="col-xs-10 col-md-4 col-lg-8 bg-primary">		B:  col-xs-12     A+B=12
+            B
+        </div>			
+    </div>
+
+    <div class="row">
+        <!--这里的道理与上面的一样，A的col-xs-1+B的col-xs-1+C的col-xs-10是等于12的-->
+        <div class="col-xs-1 col-md-10 col-lg-1 bg-warning">
+            A
+        </div>
+        <div class="col-xs-1 col-md-1 col-lg-10 bg-primary">
+            B
+        </div>
+        <div class="col-xs-10 col-md-1 col-lg-1 bg-success">			bg-success ： BS中的颜色属性
+            C
+        </div>
+    </div>
+</div>
+		class=“container”			居中
+
+
+		一个 class=“row” 代表一行
+		一个 col-xs-2	 代表一列（ 单元格 ）	 
+			xs 小屏幕	
+			md	平板
+			lg	PC端
+		一个 row 中的 col-lg-xx : XX加起来必须等于12
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+  <!-- Bootstrap   折叠-->
+
+        data-toggle =        事件
+             collapse in    默认显示
+             collapse       默认隐藏
+
+        date-target=#ID         指定 ID 显示
+
+            <div class="row" data-toggle="collapse" data-target="#1">
+                     1321321231321
+            </div>
+
+                <div id="1" class="collapse in">
+                    这里是账单信息。。。。。。。。。。。。。。。。。
+                    这里是账单信息。。。。。。。。。。。。。。。。。
+                    这里是账单信息。。。。。。。。。。。。。。。。。
+                    这里是账单信息。。。。。。。。。。。。。。。。。
+                    这里是账单信息。。。。。。。。。。。。。。。。。
+                </div>
+
+
+

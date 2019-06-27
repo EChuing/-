@@ -18,30 +18,40 @@
 
     </head>
     <body>
-        <h2>Basic DataGrid - 基本数据网格</h2>
-        <p>DataGrid是从标记创建的，不需要JavaScript代码。
-        </p>         Tcreated markup，needed      code .
-        <div style="margin:20px 0;"></div>
-
-            <table class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
-                   data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
-             <!--  |       -- 固定结构 ，配置 url 就可以了--             |                  -->
-
+        <script>
+            //用 function()包装数据，保证下面数据在页面渲染完成后加载
+            $(function(){
+					var json = [
+						{1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+						{1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+						{1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+						{1:1, 2:2, 3:100.00, 4:1.00, 5:'dsfad', 6:'s'},
+					]
+									  '本地加载'
+					$('#tt').datagrid('loadData', json);  //在 id为tt的  打印
+				}
+				);
+        </script>
+        
+        <table id="tt" class="easyui-datagrid" style="width:600px;height:250px"
+                   title="Load Data" iconCls="icon-save" fitColumns="true">    
                 <thead>
                     <tr>
-                        <th data-options="field:'物品ID',width:80">Item ID</th>
-                        <th data-options="field:'产品',width:100">Product</th>
-                        <th data-options="field:'价格表',width:80,align:'right'">List Price</th>
-                        <th data-options="field:'单位成本',width:80,align:'right'">Unit Cost</th>
-                        <th data-options="field:'属性',width:250">Attribute</th>
-                        <th data-options="field:'状态',width:60,align:'center'">Status</th>
+                        <th field="1" width="80">一号</th>
+                        <th field="2" width="80">二号</th>
+                        <th field="3" width="80" align="right">三号</th>
+                        <th field="4" width="80" align="right">四号</th>
+                        <th field="5" width="80">五号</th>
+                        <th field="6" width="60" align="center">六号</th>
+
                     </tr>
                 </thead>
-
-                <tr><td></td></tr>
-
             </table>
 
     </body>
 </html>
 
+		$( 
+		
+		
+		)

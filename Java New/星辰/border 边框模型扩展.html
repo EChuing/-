@@ -1,0 +1,77 @@
+
+解决刁钻边框模型，    半圆+矩形等
+
+
+
+1、border-radius
+
+		圆角是做网页永远绕不过的话题，
+		以前基本是通过背景图片做的，
+		有了CSS3后可以使用简单的属性搞定，
+		可以通过border-radius设置元素的圆角半径。
+
+
+		width: 100px;
+		height: 100px;
+		border-radius: 50px;
+
+
+		border-radius是缩写格式，
+		其实border-radius和border属性一样，
+		还可以把各个角单独拆分出来，
+		也就是以下四种写法 ：
+
+
+									半径	直径	
+		border-top-left-radius: <length>  <length>
+		border-top-right-radius: <length>  <length>
+		border-bottom-right-radius:<length>  <length>
+		border-bottom-left-radius:<length>  <length>
+
+		如果任意一个值为0，那么这个角就不是圆角。
+
+
+
+2、border-image
+
+		边框都是线条略显单调，使用CSS3的border-image属性可以用图片作为边框的修饰。
+
+		border-image 属性是一个简写属性，用于设置以下属性：
+
+		border-image-source  // 用在边框的图片的路径。
+		border-image-slice  // 图片边框向内偏移。
+		border-image-width  // 图片边框的宽度。
+		border-image-outset  // 边框图像区域超出边框的量。
+		border-image-repeat  // 图像边框是否应平铺(repeated)、铺满(rounded)或拉伸(stretched)。
+3、box-shadow
+
+		box-shadow 属性向框添加一个或多个阴影。
+
+		box-shadow:inset x-offset y-offset blur-radius spread-radius color
+		box-shadow属性至多有6个参数设置：
+
+		阴影类型：此参数是一个可选值，如果不设值，其默认的投影方式是外阴影；如果取其唯一值inset,就是将外阴影变成内阴影
+		X-offset:是指阴影水平偏移量其值可以是正负值可以取正负值，如果值为正值，则阴影在对象的右边，反之其值为负值时，阴影在对象的左边
+		Y-offset:是指阴影的垂直偏移量，其值也可以是正负值，如果为正值，阴影在对象的底部，反之其值为负值时，阴影在对象的顶部
+		阴影模糊半径：此参数是可选，，但其值只能是为正值，如果其值为0时，表示阴影不具有模糊效果，其值越大阴影的边缘就越模糊
+		阴影扩展半径：此参数可选，其值可以是正负值，如果值为正，则整个阴影都延展扩大，反之值为负值是，则缩小
+		阴影颜色：此参数可选，如果不设定任何颜色时，浏览器会取默认色，但各浏览器默认色不一样
+		box-shadow可以使用一个或多个投影，如果使用多个投影时必须需要用逗号分开。
+
+		box-shadow: 3px 3px 3px orange, 3px 3px 3px red;
+
+
+4、box-sizing
+
+			传统的盒模型width就是指内容区域宽度，
+			和padding、border没有关系。
+			但是这在布局上会带来一定的困难。
+
+			box-sizing可以改变盒模型：
+
+			content-box：标准盒模型
+			border-box：width = content width + paddingLeft + borderLeft + paddingRight + borderRight
+
+
+
+
